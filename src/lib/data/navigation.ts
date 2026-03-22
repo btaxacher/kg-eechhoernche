@@ -18,6 +18,7 @@ export const navigationItems: readonly NavItem[] = [
   },
   { label: "Tollitäten", href: "/tollitaeten" },
   { label: "Orden", href: "/orden" },
+  { label: "Galerie", href: "/galerie" },
   { label: "Termine", href: "/termine" },
   { label: "Kontakt", href: "/kontakt" },
 ] as const;
