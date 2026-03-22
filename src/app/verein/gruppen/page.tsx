@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Music, Sparkles, Star } from "lucide-react";
 
@@ -38,6 +39,16 @@ export default function GruppenPage() {
               </div>
             </div>
 
+            {/* Garde Foto */}
+            <div className="relative mb-6 aspect-[16/10] overflow-hidden rounded-xl">
+              <Image
+                src="/images/gruppen/Garde_mit_schild.jpg"
+                alt="Tanzgarde der KG Eechhörnche"
+                fill
+                className="object-cover"
+              />
+            </div>
+
             <div className="mb-6 space-y-3">
               <div>
                 <h3 className="text-sm font-semibold text-primary">
@@ -50,12 +61,22 @@ export default function GruppenPage() {
             </div>
 
             <div className="rounded-xl bg-secondary/10 p-4">
-              <div className="flex items-center gap-3">
-                <Sparkles className="h-5 w-5 text-[oklch(0.65_0.1_85)]" />
+              <div className="flex items-center gap-4">
+                <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full">
+                  <Image
+                    src="/images/gruppen/Joana.jpg"
+                    alt="Maskottchen Joana"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <div>
-                  <h3 className="font-semibold text-foreground">
-                    Maskottchenhörnchen
-                  </h3>
+                  <div className="flex items-center gap-2">
+                    <Sparkles className="h-4 w-4 text-[oklch(0.65_0.1_85)]" />
+                    <h3 className="font-semibold text-foreground">
+                      Maskottchenhörnchen
+                    </h3>
+                  </div>
                   <p className="text-sm text-muted-foreground">
                     &ldquo;JOANA&rdquo;
                   </p>
@@ -80,6 +101,16 @@ export default function GruppenPage() {
                   Seit 2004 auf der Bühne
                 </p>
               </div>
+            </div>
+
+            {/* Kopf-Banner-Foto als Herrenballett-Impression */}
+            <div className="relative mb-6 aspect-[16/10] overflow-hidden rounded-xl">
+              <Image
+                src="/images/hero/Kopf2014_4.JPG"
+                alt="Karneval in Ettelscheid"
+                fill
+                className="object-cover"
+              />
             </div>
 
             <p className="mb-4 text-muted-foreground">

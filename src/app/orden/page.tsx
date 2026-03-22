@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Medal } from "lucide-react";
 import { orden } from "@/lib/data/orden";
@@ -17,7 +18,8 @@ export default function OrdenPage() {
           Unsere Orden
         </h1>
         <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-          Jede Session hat ihren eigenen Orden — eine Sammlung voller Erinnerungen.
+          Jede Session hat ihren eigenen Orden — eine Sammlung voller
+          Erinnerungen.
         </p>
       </div>
 
@@ -27,10 +29,21 @@ export default function OrdenPage() {
             key={o.year}
             className="group border-none bg-card shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
           >
-            <CardContent className="flex flex-col items-center p-6">
-              <div className="mb-3 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-secondary/30 to-primary/10 transition-colors group-hover:from-secondary/50 group-hover:to-primary/20">
-                <Medal className="h-10 w-10 text-[oklch(0.65_0.1_85)]" />
-              </div>
+            <CardContent className="flex flex-col items-center p-4">
+              {o.image ? (
+                <div className="relative mb-3 aspect-square w-full overflow-hidden rounded-lg">
+                  <Image
+                    src={o.image}
+                    alt={`Sessionsorden ${o.year}`}
+                    fill
+                    className="object-contain transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+              ) : (
+                <div className="mb-3 flex aspect-square w-full items-center justify-center rounded-lg bg-gradient-to-br from-secondary/30 to-primary/10">
+                  <Medal className="h-10 w-10 text-[oklch(0.65_0.1_85)]" />
+                </div>
+              )}
               <span className="text-lg font-bold text-foreground">
                 {o.year}
               </span>
@@ -40,13 +53,6 @@ export default function OrdenPage() {
             </CardContent>
           </Card>
         ))}
-      </div>
-
-      <div className="mt-12 rounded-2xl bg-muted/50 p-8 text-center">
-        <p className="text-sm text-muted-foreground">
-          Bilder der einzelnen Orden werden nach und nach ergänzt. Besuchen Sie
-          uns regelmäßig für Updates!
-        </p>
       </div>
     </div>
   );

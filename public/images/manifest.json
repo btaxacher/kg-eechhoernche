@@ -1,0 +1,374 @@
+{
+  "downloaded": [
+    {
+      "url": "http://www.eechhoernche.de/images/Kopf_Hein.jpg",
+      "path": "images/hero/Kopf_Hein.jpg",
+      "category": "hero"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Kopf2014_1.JPG",
+      "path": "images/hero/Kopf2014_1.JPG",
+      "category": "hero"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Tolitaetpetra.jpg",
+      "path": "images/logo/Tolitaetpetra.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Zepter%20und%20Co%202016.JPG",
+      "path": "images/logo/Zepter%20und%20Co%202016.JPG",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Kopf2014_4.JPG",
+      "path": "images/hero/Kopf2014_4.JPG",
+      "category": "hero"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/IMG_3069.jpg",
+      "path": "images/logo/IMG_3069.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Dreigestin.JPG",
+      "path": "images/logo/Dreigestin.JPG",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/2019.png",
+      "path": "images/orden/2019.png",
+      "category": "orden"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Hauptbanner.png",
+      "path": "images/hero/Hauptbanner.png",
+      "category": "hero"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Dreigestirn%202023-2024.JPG",
+      "path": "images/dreigestirn/Dreigestirn%202023-2024.JPG",
+      "category": "dreigestirn"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/startseite_button.jpg",
+      "path": "images/logo/startseite_button.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/verein.jpg",
+      "path": "images/logo/verein.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/bildergallerie-button.jpg",
+      "path": "images/logo/bildergallerie-button.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/termine_und_veranstaltungen.JPG",
+      "path": "images/logo/termine_und_veranstaltungen.JPG",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/links.jpg",
+      "path": "images/logo/links.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Kontakt_button.jpg",
+      "path": "images/logo/Kontakt_button.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/impressum-button.jpg",
+      "path": "images/logo/impressum-button.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Datenschutz_button.jpg",
+      "path": "images/logo/Datenschutz_button.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Sitemap_button.jpg",
+      "path": "images/logo/Sitemap_button.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/WErner.jpg",
+      "path": "images/logo/WErner.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Nelli.jpg",
+      "path": "images/logo/Nelli.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Rolf.jpg",
+      "path": "images/logo/Rolf.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Mike.jpg",
+      "path": "images/logo/Mike.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Tuenn.jpg",
+      "path": "images/logo/Tuenn.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Willi.jpg",
+      "path": "images/logo/Willi.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Locke.jpg",
+      "path": "images/logo/Locke.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Karl_heinz_tolitaeten.jpg",
+      "path": "images/logo/Karl_heinz_tolitaeten.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Celina%202014.JPG",
+      "path": "images/logo/Celina%202014.JPG",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/ordenm1.jpg",
+      "path": "images/orden/ordenm1.jpg",
+      "category": "orden"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Button1.gif",
+      "path": "images/logo/Button1.gif",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/zurueck_blau_button.JPG",
+      "path": "images/logo/zurueck_blau_button.JPG",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Laufleiste_schwarz_blau.gif",
+      "path": "images/logo/Laufleiste_schwarz_blau.gif",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/tanzgarde_button.JPG",
+      "path": "images/gruppen/tanzgarde_button.JPG",
+      "category": "gruppen"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Garde_mit_schild.jpg",
+      "path": "images/gruppen/Garde_mit_schild.jpg",
+      "category": "gruppen"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Joana.jpg",
+      "path": "images/gruppen/Joana.jpg",
+      "category": "gruppen"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Wappen_schleiden.jpg",
+      "path": "images/logo/Wappen_schleiden.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Wappen_hellenthal.gif",
+      "path": "images/logo/Wappen_hellenthal.gif",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Wappen_vossenack.jpg",
+      "path": "images/logo/Wappen_vossenack.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Wappen_Olef.jpg",
+      "path": "images/logo/Wappen_Olef.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/aks.jpg",
+      "path": "images/logo/aks.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/rvd.gif",
+      "path": "images/logo/rvd.gif",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/bdk.jpg",
+      "path": "images/logo/bdk.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Telefon.gif",
+      "path": "images/logo/Telefon.gif",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/eichhorn.jpg",
+      "path": "images/logo/eichhorn.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "https://www.dw-formmailer.de/images/marker1.gif",
+      "path": "images/misc/marker1.gif",
+      "category": "misc"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Kopf_Indianerwagen.jpg",
+      "path": "images/hero/Kopf_Indianerwagen.jpg",
+      "category": "hero"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/wie_alles_begann_button.JPG",
+      "path": "images/logo/wie_alles_begann_button.JPG",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/ueberuns-button.jpg",
+      "path": "images/logo/ueberuns-button.jpg",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/unsere_tollitaetenbutton.JPG",
+      "path": "images/dreigestirn/unsere_tollitaetenbutton.JPG",
+      "category": "dreigestirn"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/unsereorden-button.jpg",
+      "path": "images/orden/unsereorden-button.jpg",
+      "category": "orden"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/unsere_gruppen_button.JPG",
+      "path": "images/gruppen/unsere_gruppen_button.JPG",
+      "category": "gruppen"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Satzung.JPG",
+      "path": "images/logo/Satzung.JPG",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Jahresbeitrag_button.JPG",
+      "path": "images/logo/Jahresbeitrag_button.JPG",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Beitrittserklaerung_button.JPG",
+      "path": "images/logo/Beitrittserklaerung_button.JPG",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/nur_fuer_mitglieder_button.JPG",
+      "path": "images/logo/nur_fuer_mitglieder_button.JPG",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/termine_intern_button.GIF",
+      "path": "images/logo/termine_intern_button.GIF",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Veranstaltungen_Button.GIF",
+      "path": "images/logo/Veranstaltungen_Button.GIF",
+      "category": "logo"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Orden_2002.jpg",
+      "path": "images/orden/Orden_2002.jpg",
+      "category": "orden"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Orden_2003.jpg",
+      "path": "images/orden/Orden_2003.jpg",
+      "category": "orden"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Orden_2004.jpg",
+      "path": "images/orden/Orden_2004.jpg",
+      "category": "orden"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Orden_2005.jpg",
+      "path": "images/orden/Orden_2005.jpg",
+      "category": "orden"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Orden_2006.jpg",
+      "path": "images/orden/Orden_2006.jpg",
+      "category": "orden"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Orden_2007.jpg",
+      "path": "images/orden/Orden_2007.jpg",
+      "category": "orden"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Orden_2008.jpg",
+      "path": "images/orden/Orden_2008.jpg",
+      "category": "orden"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Orden_2009.jpg",
+      "path": "images/orden/Orden_2009.jpg",
+      "category": "orden"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Orden_2010.jpg",
+      "path": "images/orden/Orden_2010.jpg",
+      "category": "orden"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Orden_2011.jpg",
+      "path": "images/orden/Orden_2011.jpg",
+      "category": "orden"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Orden_2012.jpg",
+      "path": "images/orden/Orden_2012.jpg",
+      "category": "orden"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Orden%202013.jpg",
+      "path": "images/orden/Orden%202013.jpg",
+      "category": "orden"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Orden_2014.JPG",
+      "path": "images/orden/Orden_2014.JPG",
+      "category": "orden"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Orden_2015.jpg",
+      "path": "images/orden/Orden_2015.jpg",
+      "category": "orden"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Orden_2016.JPG",
+      "path": "images/orden/Orden_2016.JPG",
+      "category": "orden"
+    },
+    {
+      "url": "http://www.eechhoernche.de/images/Orden%202017.JPG",
+      "path": "images/orden/Orden%202017.JPG",
+      "category": "orden"
+    }
+  ],
+  "failed": [
+    "http://www.eechhoernche.de/images/Orden_2018.jpg",
+    "http://www.eechhoernche.de/images/Orden%202019.jpg"
+  ],
+  "timestamp": "2026-03-22T21:04:16.035Z"
+}

@@ -51,12 +51,12 @@ export default function VorstandPage() {
             kümmert:
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
-            {weitereHelfer.map((name) => (
+            {weitereHelfer.map((helper) => (
               <span
-                key={name}
+                key={helper.name}
                 className="rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary"
               >
-                {name}
+                {helper.name}
               </span>
             ))}
           </div>

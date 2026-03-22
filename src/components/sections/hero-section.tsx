@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { buttonVariants } from "@/components/ui/button-variants";
 import { CalendarDays, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -6,7 +7,18 @@ import { ConfettiAnimation } from "./confetti-animation";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[oklch(0.25_0.05_18)] via-[oklch(0.20_0.04_20)] to-[oklch(0.15_0.03_30)] text-white">
+    <section className="relative overflow-hidden text-white">
+      {/* Background Image */}
+      <Image
+        src="/images/dreigestirn/Dreigestirn%202023-2024.JPG"
+        alt="Dreigestirn 2023/2024"
+        fill
+        className="object-cover"
+        priority
+      />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[oklch(0.15_0.05_18/0.88)] via-[oklch(0.12_0.04_20/0.85)] to-[oklch(0.10_0.03_30/0.90)]" />
+
       <ConfettiAnimation />
 
       {/* Decorative elements */}
@@ -15,6 +27,17 @@ export function HeroSection() {
 
       <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8 lg:py-40">
         <div className="mx-auto max-w-3xl text-center">
+          {/* Logo */}
+          <div className="mb-6 flex justify-center">
+            <Image
+              src="/images/logo/eechhoernche-logo.jpg"
+              alt="Eechhörnche"
+              width={80}
+              height={80}
+              className="rounded-full border-2 border-white/30 shadow-2xl"
+            />
+          </div>
+
           {/* Badge */}
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm backdrop-blur-sm">
             <span className="text-[oklch(0.78_0.1_85)]">Session 2024/2025</span>

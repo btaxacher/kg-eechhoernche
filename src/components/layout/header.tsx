@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
@@ -95,9 +96,13 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground">
-            <span className="text-lg font-bold">🐿️</span>
-          </div>
+          <Image
+            src="/images/logo/eechhoernche-logo.jpg"
+            alt="Eechhörnche Logo"
+            width={40}
+            height={40}
+            className="rounded-full"
+          />
           <div className="hidden sm:block">
             <p className="text-sm font-bold leading-tight text-foreground">
               KG Ett&apos;schelder

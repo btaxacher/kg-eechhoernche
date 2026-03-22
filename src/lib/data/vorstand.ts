@@ -10,11 +10,13 @@ export const vorstand: readonly VorstandMember[] = [
     title: "Vosihörnchen",
     realTitle: "Vorsitzender",
     name: "Werner Doemsky",
+    image: "/images/vorstand/WErner.jpg",
   },
   {
     title: "Präsihörnchen",
     realTitle: "Präsidentin",
     name: "Nelli Greindl",
+    image: "/images/vorstand/Nelli.jpg",
   },
   {
     title: "Kassihörnchen",
@@ -25,12 +27,16 @@ export const vorstand: readonly VorstandMember[] = [
     title: "Schreibihörnchen",
     realTitle: "Schriftführer",
     name: "Rolf (Roller) Henn",
+    image: "/images/vorstand/Rolf.jpg",
   },
 ] as const;
 
-export const weitereHelfer = [
-  "Mike Ronig",
-  "Werner Heinen",
-  "Willi Heinen",
-  "Locke Rosewich",
+export const weitereHelfer: readonly {
+  readonly name: string;
+  readonly image?: string;
+}[] = [
+  { name: "Mike Ronig", image: "/images/vorstand/Mike.jpg" },
+  { name: "Werner Heinen", image: "/images/vorstand/Tuenn.jpg" },
+  { name: "Willi Heinen", image: "/images/vorstand/Willi.jpg" },
+  { name: "Locke Rosewich", image: "/images/vorstand/Locke.jpg" },
 ] as const;
