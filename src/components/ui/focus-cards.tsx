@@ -20,8 +20,7 @@ export const FocusCard = React.memo(
       onMouseEnter={() => setHovered(index)}
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "rounded-lg relative bg-muted overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out",
-        hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
+        "rounded-lg relative bg-muted overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out"
       )}
     >
       <Image

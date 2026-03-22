@@ -120,7 +120,7 @@ export function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/50"
+        className="absolute bottom-12 left-1/2 z-20 -translate-x-1/2 flex flex-col items-center gap-2 text-white/50"
       >
         <span className="text-xs tracking-widest uppercase">Entdecken</span>
         <motion.div
@@ -131,21 +131,8 @@ export function HeroSection() {
         </motion.div>
       </motion.div>
 
-      {/* Bottom wave */}
-      <div className="absolute bottom-0 left-0 right-0 z-10">
-        <svg
-          viewBox="0 0 1440 80"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0 40C360 80 720 0 1080 40C1260 60 1380 50 1440 40V80H0V40Z"
-            fill="oklch(0.98 0.003 80)"
-          />
-        </svg>
-      </div>
+      {/* Bottom gradient fade — no wave, clean transition */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 }
