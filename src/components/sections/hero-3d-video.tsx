@@ -12,7 +12,7 @@ import { CalendarDays, Users, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button-variants";
 
-const TOTAL_FRAMES = 96;
+const TOTAL_FRAMES = 44;
 const FRAME_PATH = "/videos/frames/frame_";
 
 function getFrameSrc(index: number): string {
@@ -88,21 +88,21 @@ export function Hero3dVideo() {
     drawFrame(frameIndex);
   });
 
-  // Text overlay transforms
-  const sessionBadgeOpacity = useTransform(scrollYProgress, [0.25, 0.35], [0, 1]);
-  const sessionBadgeY = useTransform(scrollYProgress, [0.25, 0.35], [20, 0]);
-  const titleOpacity = useTransform(scrollYProgress, [0.3, 0.4], [0, 1]);
-  const titleY = useTransform(scrollYProgress, [0.3, 0.4], [30, 0]);
-  const mottoOpacity = useTransform(scrollYProgress, [0.45, 0.55], [0, 1]);
-  const mottoY = useTransform(scrollYProgress, [0.45, 0.55], [20, 0]);
-  const ctaOpacity = useTransform(scrollYProgress, [0.6, 0.7], [0, 1]);
-  const ctaY = useTransform(scrollYProgress, [0.6, 0.7], [20, 0]);
-  const overlayOpacity = useTransform(scrollYProgress, [0.2, 0.35, 0.85, 0.95], [0, 0.6, 0.6, 0]);
-  const sectionOpacity = useTransform(scrollYProgress, [0.88, 1.0], [1, 0]);
-  const scrollIndicatorOpacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
+  // Text overlay transforms — tuned for 250vh scroll
+  const sessionBadgeOpacity = useTransform(scrollYProgress, [0.4, 0.5], [0, 1]);
+  const sessionBadgeY = useTransform(scrollYProgress, [0.4, 0.5], [20, 0]);
+  const titleOpacity = useTransform(scrollYProgress, [0.45, 0.55], [0, 1]);
+  const titleY = useTransform(scrollYProgress, [0.45, 0.55], [30, 0]);
+  const mottoOpacity = useTransform(scrollYProgress, [0.55, 0.65], [0, 1]);
+  const mottoY = useTransform(scrollYProgress, [0.55, 0.65], [20, 0]);
+  const ctaOpacity = useTransform(scrollYProgress, [0.7, 0.8], [0, 1]);
+  const ctaY = useTransform(scrollYProgress, [0.7, 0.8], [20, 0]);
+  const overlayOpacity = useTransform(scrollYProgress, [0.35, 0.5, 0.9, 0.98], [0, 0.6, 0.6, 0]);
+  const sectionOpacity = useTransform(scrollYProgress, [0.93, 1.0], [1, 0]);
+  const scrollIndicatorOpacity = useTransform(scrollYProgress, [0, 0.08], [1, 0]);
 
   return (
-    <div ref={containerRef} className="relative" style={{ height: "500vh" }}>
+    <div ref={containerRef} className="relative" style={{ height: "250vh" }}>
       <div className="sticky top-0 h-screen w-full overflow-hidden">
         <motion.div
           style={{ opacity: sectionOpacity }}
