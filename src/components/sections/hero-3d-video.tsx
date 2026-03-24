@@ -1,8 +1,7 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect, useState, useCallback } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import {
   motion,
   useScroll,
@@ -13,102 +12,120 @@ import { CalendarDays, Users, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button-variants";
 
+const TOTAL_FRAMES = 96;
+const FRAME_PATH = "/videos/frames/frame_";
+
+function getFrameSrc(index: number): string {
+  const padded = String(index + 1).padStart(4, "0");
+  return `${FRAME_PATH}${padded}.jpg`;
+}
+
 export function Hero3dVideo() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const imagesRef = useRef<HTMLImageElement[]>([]);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const currentFrameRef = useRef(0);
+
+  // Preload all frame images
+  useEffect(() => {
+    let loadedCount = 0;
+    const images: HTMLImageElement[] = new Array(TOTAL_FRAMES);
+
+    for (let i = 0; i < TOTAL_FRAMES; i++) {
+      const img = new Image();
+      img.src = getFrameSrc(i);
+      img.onload = () => {
+        loadedCount++;
+        images[i] = img;
+        // Draw first frame immediately
+        if (i === 0 && canvasRef.current) {
+          const ctx = canvasRef.current.getContext("2d");
+          if (ctx) {
+            canvasRef.current.width = img.naturalWidth;
+            canvasRef.current.height = img.naturalHeight;
+            ctx.drawImage(img, 0, 0);
+          }
+        }
+        if (loadedCount === TOTAL_FRAMES) {
+          imagesRef.current = images;
+          setIsLoaded(true);
+        }
+      };
+    }
+  }, []);
+
+  const drawFrame = useCallback((frameIndex: number) => {
+    const canvas = canvasRef.current;
+    const images = imagesRef.current;
+    if (!canvas || images.length === 0) return;
+
+    const clampedIndex = Math.max(0, Math.min(frameIndex, TOTAL_FRAMES - 1));
+    if (clampedIndex === currentFrameRef.current && isLoaded) return;
+    currentFrameRef.current = clampedIndex;
+
+    const img = images[clampedIndex];
+    if (!img) return;
+
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    if (canvas.width !== img.naturalWidth) {
+      canvas.width = img.naturalWidth;
+      canvas.height = img.naturalHeight;
+    }
+    ctx.drawImage(img, 0, 0);
+  }, [isLoaded]);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"],
   });
 
-  // Bind video currentTime to scroll progress
+  // Draw the correct frame based on scroll position
   useMotionValueEvent(scrollYProgress, "change", (progress) => {
-    const video = videoRef.current;
-    if (!video || !video.duration || Number.isNaN(video.duration)) return;
-    video.currentTime = progress * video.duration;
+    const frameIndex = Math.round(progress * (TOTAL_FRAMES - 1));
+    drawFrame(frameIndex);
   });
 
-  // Text overlay opacity transforms based on scroll progress
-  const sessionBadgeOpacity = useTransform(
-    scrollYProgress,
-    [0.25, 0.35],
-    [0, 1]
-  );
-  const sessionBadgeY = useTransform(
-    scrollYProgress,
-    [0.25, 0.35],
-    [20, 0]
-  );
-
-  const titleOpacity = useTransform(
-    scrollYProgress,
-    [0.3, 0.4],
-    [0, 1]
-  );
-  const titleY = useTransform(
-    scrollYProgress,
-    [0.3, 0.4],
-    [30, 0]
-  );
-
-  const mottoOpacity = useTransform(
-    scrollYProgress,
-    [0.45, 0.55],
-    [0, 1]
-  );
-  const mottoY = useTransform(
-    scrollYProgress,
-    [0.45, 0.55],
-    [20, 0]
-  );
-
-  const ctaOpacity = useTransform(
-    scrollYProgress,
-    [0.6, 0.7],
-    [0, 1]
-  );
-  const ctaY = useTransform(
-    scrollYProgress,
-    [0.6, 0.7],
-    [20, 0]
-  );
-
-  // Gradient overlay fades in when text appears
-  const overlayOpacity = useTransform(
-    scrollYProgress,
-    [0.2, 0.35, 0.85, 0.95],
-    [0, 0.6, 0.6, 0]
-  );
-
-  // Everything fades out at the end
-  const sectionOpacity = useTransform(
-    scrollYProgress,
-    [0.88, 1.0],
-    [1, 0]
-  );
-
-  // Scroll indicator fades out as user scrolls
-  const scrollIndicatorOpacity = useTransform(
-    scrollYProgress,
-    [0, 0.05],
-    [1, 0]
-  );
+  // Text overlay transforms
+  const sessionBadgeOpacity = useTransform(scrollYProgress, [0.25, 0.35], [0, 1]);
+  const sessionBadgeY = useTransform(scrollYProgress, [0.25, 0.35], [20, 0]);
+  const titleOpacity = useTransform(scrollYProgress, [0.3, 0.4], [0, 1]);
+  const titleY = useTransform(scrollYProgress, [0.3, 0.4], [30, 0]);
+  const mottoOpacity = useTransform(scrollYProgress, [0.45, 0.55], [0, 1]);
+  const mottoY = useTransform(scrollYProgress, [0.45, 0.55], [20, 0]);
+  const ctaOpacity = useTransform(scrollYProgress, [0.6, 0.7], [0, 1]);
+  const ctaY = useTransform(scrollYProgress, [0.6, 0.7], [20, 0]);
+  const overlayOpacity = useTransform(scrollYProgress, [0.2, 0.35, 0.85, 0.95], [0, 0.6, 0.6, 0]);
+  const sectionOpacity = useTransform(scrollYProgress, [0.88, 1.0], [1, 0]);
+  const scrollIndicatorOpacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
 
   return (
     <div ref={containerRef} className="relative" style={{ height: "500vh" }}>
       <div className="sticky top-0 h-screen w-full overflow-hidden">
-        <motion.div style={{ opacity: sectionOpacity }} className="relative h-full w-full">
-          {/* Video */}
-          <video
-            ref={videoRef}
-            src="/videos/hero-3d.mp4"
-            muted
-            playsInline
-            preload="auto"
-            poster="/images/logo/eechhoernche-logo.jpg"
-            className="h-full w-full object-contain bg-[oklch(0.98_0.003_80)]"
+        <motion.div
+          style={{ opacity: sectionOpacity }}
+          className="relative flex h-full w-full items-center justify-center bg-[oklch(0.98_0.003_80)]"
+        >
+          {/* Canvas for frame rendering */}
+          <canvas
+            ref={canvasRef}
+            className="h-full w-full object-contain"
+            style={{ maxHeight: "100vh", maxWidth: "100vw" }}
           />
+
+          {/* Loading indicator */}
+          {!isLoaded && (
+            <div className="absolute inset-0 flex items-center justify-center bg-[oklch(0.98_0.003_80)]">
+              <div className="flex flex-col items-center gap-3">
+                <div className="h-8 w-8 animate-spin rounded-full border-2 border-[oklch(0.45_0.18_18)] border-t-transparent" />
+                <span className="text-sm text-[oklch(0.22_0.03_50/0.5)]">
+                  Animation wird geladen...
+                </span>
+              </div>
+            </div>
+          )}
 
           {/* Gradient overlay for text readability */}
           <motion.div
