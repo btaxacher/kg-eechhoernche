@@ -11,6 +11,7 @@ interface ScrollExpandMediaProps {
   title?: string;
   subtitle?: string;
   scrollHint?: string;
+  heroOverlay?: ReactNode;
   children?: ReactNode;
 }
 
@@ -21,6 +22,7 @@ export default function ScrollExpandMedia({
   title,
   subtitle,
   scrollHint,
+  heroOverlay,
   children,
 }: ScrollExpandMediaProps) {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -141,8 +143,21 @@ export default function ScrollExpandMedia({
               className="w-screen h-screen object-cover"
               priority
             />
-            <div className="absolute inset-0 bg-[oklch(0.15_0.03_50/0.3)]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.12_0.04_20/0.75)] via-[oklch(0.12_0.04_20/0.55)] to-[oklch(0.12_0.04_20/0.3)]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.12_0.04_20/0.6)] via-transparent to-[oklch(0.12_0.04_20/0.3)]" />
           </motion.div>
+
+          {/* Hero overlay content — fades out with background */}
+          {heroOverlay && (
+            <motion.div
+              className="absolute inset-0 z-[5]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 - scrollProgress * 1.5 }}
+              transition={{ duration: 0.1 }}
+            >
+              {heroOverlay}
+            </motion.div>
+          )}
 
           <div className="container mx-auto flex flex-col items-center justify-start relative z-10">
             <div className="flex flex-col items-center justify-center w-full h-[100dvh] relative">

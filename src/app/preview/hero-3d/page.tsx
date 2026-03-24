@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ScrollExpandMedia from "@/components/ui/scroll-expansion-hero";
+import { HeroOverlay } from "./hero-overlay";
 import { TeaserGrid } from "@/components/sections/teaser-grid";
 import { EventsPreview } from "@/components/sections/events-preview";
 import { ImageSlider } from "@/components/sections/image-slider";
@@ -21,6 +22,7 @@ export default function PreviewHero3dPage() {
       title="KG Eechhörnche"
       subtitle="Session 2024/2025"
       scrollHint="Scrollen zum Entdecken"
+      heroOverlay={<HeroOverlay />}
     >
       <ImageSlider />
 
