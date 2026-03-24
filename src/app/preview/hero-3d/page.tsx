@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Hero3dVideo } from "@/components/sections/hero-3d-video";
+import ScrollExpandMedia from "@/components/ui/scroll-expansion-hero";
 import { TeaserGrid } from "@/components/sections/teaser-grid";
 import { EventsPreview } from "@/components/sections/events-preview";
 import { ImageSlider } from "@/components/sections/image-slider";
@@ -9,14 +9,19 @@ import { OrnamentDivider } from "@/components/ui/ornament-divider";
 export const metadata: Metadata = {
   title: "Preview: 3D Hero Animation",
   description:
-    "Preview der 3D Scroll-Animation fuer die KG Eechhoernche Website",
+    "Preview der 3D Scroll-Expansion Hero Animation fuer die KG Eechhoernche Website",
 };
 
 export default function PreviewHero3dPage() {
   return (
-    <>
-      <Hero3dVideo />
-
+    <ScrollExpandMedia
+      mediaType="video"
+      mediaSrc="/videos/hero-3d-loop.mp4"
+      bgImageSrc="/images/hero/carnival-bg.png"
+      title="KG Eechhörnche"
+      subtitle="Session 2024/2025"
+      scrollHint="Scrollen zum Entdecken"
+    >
       <ImageSlider />
 
       <ScrollFade>
@@ -52,6 +57,6 @@ export default function PreviewHero3dPage() {
           </div>
         </section>
       </ScrollFade>
-    </>
+    </ScrollExpandMedia>
   );
 }

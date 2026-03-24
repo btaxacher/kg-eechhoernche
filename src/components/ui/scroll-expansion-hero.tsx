@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 interface ScrollExpandMediaProps {
+  mediaType?: "video" | "image";
   mediaSrc: string;
   bgImageSrc: string;
   title?: string;
@@ -14,6 +15,7 @@ interface ScrollExpandMediaProps {
 }
 
 export default function ScrollExpandMedia({
+  mediaType = "image",
   mediaSrc,
   bgImageSrc,
   title,
@@ -155,15 +157,27 @@ export default function ScrollExpandMedia({
                   boxShadow: "0px 0px 50px rgba(0, 0, 0, 0.3)",
                 }}
               >
-                <div className="relative w-full h-full">
-                  <Image
-                    src={mediaSrc}
-                    alt={title ?? "Hero"}
-                    width={1280}
-                    height={720}
-                    className="w-full h-full object-cover rounded-xl"
-                    priority
-                  />
+                <div className="relative w-full h-full pointer-events-none">
+                  {mediaType === "video" ? (
+                    <video
+                      src={mediaSrc}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="auto"
+                      className="w-full h-full object-cover rounded-xl"
+                    />
+                  ) : (
+                    <Image
+                      src={mediaSrc}
+                      alt={title ?? "Hero"}
+                      width={1280}
+                      height={720}
+                      className="w-full h-full object-cover rounded-xl"
+                      priority
+                    />
+                  )}
                   <motion.div
                     className="absolute inset-0 bg-[oklch(0.15_0.03_50/0.5)] rounded-xl"
                     initial={{ opacity: 0.7 }}
